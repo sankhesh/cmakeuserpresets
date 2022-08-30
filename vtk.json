@@ -45,6 +45,18 @@
         "bld",
         "windows-msvc"
       ]
+    },
+    {
+      "name": "vtk-debug-bld-windows-ospray",
+      "displayName": "vtk-debug-bld-windows-ospray",
+      "inherits": "vtk-debug-bld-windows",
+      "cacheVariables":
+      {
+        "VTK_ENABLE_OSPRAY":"ON",
+        "VTK_MODULE_ENABLE_VTK_RenderingRayTracing":"WANT",
+        "TBB_DIR":"D:/Projects/ospray/install/lib/cmake/tbb",
+        "ospray_DIR":"D:/Projects/ospray/install/lib/cmake/ospray-2.7.1"
+      }
     }
   ]
 }
