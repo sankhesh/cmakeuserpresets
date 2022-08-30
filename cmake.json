@@ -1,0 +1,55 @@
+{
+  "version": 4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/linux.json",
+    "cpresets/windows.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "cmake-common",
+      "displayName": "vtk-common",
+      "inherits": "common",
+      "cacheVariables":
+      {
+        "BUILD_TESTING":"OFF",
+        "BUILD_QtDialog":"ON"
+      }
+    },
+    {
+      "name": "cmake-debug-bld-linux",
+      "displayName": "cmake-debug-bld-linux",
+      "inherits":
+      [
+        "cmake-common",
+        "Debug",
+        "bld",
+        "linux-gcc"
+      ]
+    },
+    {
+      "name": "cmake-debug-bld-windows",
+      "displayName": "cmake-debug-bld-windows",
+      "inherits":
+      [
+        "cmake-common",
+        "Debug",
+        "bld",
+        "windows-msvc"
+      ]
+    },
+    {
+      "name": "cmake-release-bld-windows",
+      "displayName": "cmake-release-bld-windows",
+      "inherits":
+      [
+        "cmake-common",
+        "Release",
+        "bld",
+        "windows-msvc"
+      ]
+    }
+  ]
+}
