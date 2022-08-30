@@ -2,9 +2,9 @@
   "version": 4,
   "include":
   [
-    "common/common.json",
-    "common/linux.json",
-    "common/windows.json"
+    "cpresets/common.json",
+    "cpresets/linux.json",
+    "cpresets/windows.json"
   ],
   "configurePresets":
   [
