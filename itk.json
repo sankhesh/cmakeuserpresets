@@ -1,0 +1,61 @@
+{
+  "version": 4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/linux.json",
+    "cpresets/windows.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "itk-common",
+      "displayName": "itk-common",
+      "inherits": "common",
+      "cacheVariables":
+      {
+        "BUILD_STATIC_LIBS":"ON",
+        "BUILD_TESTING":"ON",
+        "ITK_BUILD_DEFAULT_MODULES":"ON",
+        "ITK_WRAP_PYTHON":"OFF"
+      }
+    },
+    {
+      "name": "itk-webassembly",
+      "displayName": "itk-webassembly",
+      "inherits": "itk-common",
+      "cacheVariables":
+      {
+        "Module_MGHIO":"ON",
+        "Module_MeshToPolyData":"ON",
+        "Module_IOFDF":"ON",
+        "Module_IOMeshSTL":"ON",
+        "Module_IOMeshSWC":"ON",
+        "Module_IOOpenSlide":"OFF",
+        "Module_IOScanco":"ON"
+      }
+    },
+    {
+      "name": "itk-debug-bld-linux",
+      "displayName": "itk-debug-bld-linux",
+      "inherits":
+      [
+        "itk-webassembly",
+        "Debug",
+        "bld",
+        "linux-gcc"
+      ]
+    },
+    {
+      "name": "itk-debug-bld-windows",
+      "displayName": "itk-debug-bld-windows",
+      "inherits":
+      [
+        "itk-common",
+        "Debug",
+        "bld",
+        "windows-msvc"
+      ]
+    }
+  ]
+}

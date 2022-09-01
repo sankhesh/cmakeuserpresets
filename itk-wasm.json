@@ -1,0 +1,35 @@
+{
+  "version": 4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/linux.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "itkwasm-common",
+      "displayName": "itkwasm-common",
+      "inherits": "common",
+      "cacheVariables":
+      {
+        "BUILD_ITK_WASM_IO_MODULES":"ON"
+      }
+    },
+    {
+      "name":"itkwasm-debug-linux",
+      "displayName":"itkwasm-debug-linux",
+      "binaryDir": "${sourceDir}/../itk/ITKWebInterface-build",
+      "inherits":
+      [
+        "itkwasm-common",
+        "Debug",
+        "linux-gcc"
+      ],
+      "cacheVariables":
+      {
+        "ITK_DIR":"/home/sankhesh/Projects/itk/bld"
+      }
+    }
+  ]
+}
