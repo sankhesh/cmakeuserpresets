@@ -26,13 +26,14 @@
       "inherits": "itk-common",
       "cacheVariables":
       {
-        "Module_MGHIO":"ON",
-        "Module_MeshToPolyData":"ON",
         "Module_IOFDF":"ON",
         "Module_IOMeshSTL":"ON",
         "Module_IOMeshSWC":"ON",
         "Module_IOOpenSlide":"OFF",
-        "Module_IOScanco":"ON"
+        "Module_IOScanco":"ON",
+        "Module_ITKDCMTK": "ON",
+        "Module_MGHIO":"ON",
+        "Module_MeshToPolyData":"ON"
       }
     },
     {
