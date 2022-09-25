@@ -16,9 +16,7 @@
       {
         "VTK_BUILD_TESTING":"ON",
         "VTK_DEBUG_LEAKS":"ON",
-        "VTK_ENABLE_OSPRAY":"OFF",
         "VTK_MODULE_ENABLE_VTK_GUISupportQt":"WANT",
-        "VTK_MODULE_ENABLE_VTK_RenderingRayTracing":"DONT_WANT",
         "VTK_QT_VERSION":"5",
         "VTK_SMP_IMPLEMENTATION_TYPE":"TBB",
         "VTK_WRAP_PYTHON":"OFF"
