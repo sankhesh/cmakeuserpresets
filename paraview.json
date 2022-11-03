@@ -64,6 +64,7 @@
       ],
       "cacheVariables":
       {
+        "PARAVIEW_PLUGIN_ENABLE_SurfaceLIC":"OFF",
         "TBB_DIR":"D:/Projects/ospray/install/lib/cmake/tbb",
         "ospray_DIR":"D:/Projects/ospray/install/lib/cmake/ospray-2.7.1"
       }
