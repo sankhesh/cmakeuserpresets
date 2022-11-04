@@ -19,7 +19,6 @@
         "PARAVIEW_USE_PYTHON":"ON",
         "PARAVIEW_USE_VTKM":"OFF",
         "VTK_DEBUG_LEAKS":"ON",
-        "VTK_MODULE_USE_EXTERNAL_VTK_mpi4py":"ON",
         "VTK_SMP_IMPLEMENTATION_TYPE":"TBB"
       }
     },
@@ -52,7 +51,11 @@
         "Debug",
         "bld",
         "windows-msvc"
-      ]
+      ],
+      "cacheVariables":
+      {
+        "VTK_MODULE_USE_EXTERNAL_VTK_mpi4py":"ON"
+      }
     },
     {
       "name": "paraview-debug-bld-windows-ospray",
