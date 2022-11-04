@@ -1,0 +1,73 @@
+{
+  "version": 4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/linux.json",
+    "cpresets/windows.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "paraview-common",
+      "displayName": "paraview-common",
+      "inherits": "common",
+      "cacheVariables":
+      {
+        "PARAVIEW_BUILD_TESTING":"ON",
+        "PARAVIEW_USE_MPI":"ON",
+        "PARAVIEW_USE_PYTHON":"ON",
+        "PARAVIEW_USE_VTKM":"OFF",
+        "VTK_DEBUG_LEAKS":"ON",
+        "VTK_MODULE_USE_EXTERNAL_VTK_mpi4py":"ON",
+        "VTK_SMP_IMPLEMENTATION_TYPE":"TBB"
+      }
+    },
+    {
+      "name": "paraview-ospray",
+      "displayName": "paraview-ospray",
+      "cacheVariables":
+      {
+        "PARAVIEW_ENABLE_RAYTRACING":"ON",
+        "VTK_ENABLE_OSPRAY":"ON"
+      }
+    },
+    {
+      "name": "paraview-debug-bld-linux",
+      "displayName": "paraview-debug-bld-linux",
+      "inherits":
+      [
+        "paraview-common",
+        "Debug",
+        "bld",
+        "linux-gcc"
+      ]
+    },
+    {
+      "name": "paraview-debug-bld-windows",
+      "displayName": "paraview-debug-bld-windows",
+      "inherits":
+      [
+        "paraview-common",
+        "Debug",
+        "bld",
+        "windows-msvc"
+      ]
+    },
+    {
+      "name": "paraview-debug-bld-windows-ospray",
+      "displayName": "paraview-debug-bld-windows-ospray",
+      "inherits":
+      [
+        "paraview-debug-bld-windows",
+        "paraview-ospray"
+      ],
+      "cacheVariables":
+      {
+        "PARAVIEW_PLUGIN_ENABLE_SurfaceLIC":"OFF",
+        "TBB_DIR":"D:/Projects/ospray/install/lib/cmake/tbb",
+        "ospray_DIR":"D:/Projects/ospray/install/lib/cmake/ospray-2.7.1"
+      }
+    }
+  ]
+}

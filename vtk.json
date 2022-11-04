@@ -1,0 +1,71 @@
+{
+  "version": 4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/linux.json",
+    "cpresets/windows.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "vtk-common",
+      "displayName": "vtk-common",
+      "inherits": "common",
+      "cacheVariables":
+      {
+        "VTK_BUILD_TESTING":"ON",
+        "VTK_DEBUG_LEAKS":"ON",
+        "VTK_MODULE_ENABLE_VTK_GUISupportQt":"WANT",
+        "VTK_QT_VERSION":"5",
+        "VTK_SMP_IMPLEMENTATION_TYPE":"TBB",
+        "VTK_WRAP_PYTHON":"OFF"
+      }
+    },
+    {
+      "name": "vtk-ospray",
+      "displayName": "vtk-ospray",
+      "cacheVariables":
+      {
+        "VTK_ENABLE_OSPRAY":"ON",
+        "VTK_MODULE_ENABLE_VTK_RenderingRayTracing":"WANT"
+      }
+    },
+    {
+      "name": "vtk-debug-bld-linux",
+      "displayName": "vtk-debug-bld-linux",
+      "inherits":
+      [
+        "vtk-common",
+        "Debug",
+        "bld",
+        "linux-gcc"
+      ]
+    },
+    {
+      "name": "vtk-debug-bld-windows",
+      "displayName": "vtk-debug-bld-windows",
+      "inherits":
+      [
+        "vtk-common",
+        "Debug",
+        "bld",
+        "windows-msvc"
+      ]
+    },
+    {
+      "name": "vtk-debug-bld-windows-ospray",
+      "displayName": "vtk-debug-bld-windows-ospray",
+      "inherits":
+      [
+        "vtk-debug-bld-windows",
+        "vtk-ospray"
+      ],
+      "cacheVariables":
+      {
+        "TBB_DIR":"D:/Projects/ospray/install/lib/cmake/tbb",
+        "ospray_DIR":"D:/Projects/ospray/install/lib/cmake/ospray-2.7.1"
+      }
+    }
+  ]
+}

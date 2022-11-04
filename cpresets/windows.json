@@ -1,0 +1,43 @@
+{
+  "version":4,
+  "configurePresets":
+  [
+    {
+      "name": "windows",
+      "displayName": "windows"
+    },
+    {
+      "name": "windows-msvc",
+      "displayName": "windows-msvc",
+      "inherits": "windows",
+      "cacheVariables":
+      {
+        "CMAKE_AR": "lib.exe",
+        "CMAKE_CXX_COMPILER": "cl.exe",
+        "CMAKE_C_COMPILER": "cl.exe",
+        "CMAKE_LINKER": "link.exe"
+      }
+    },
+    {
+      "name": "windows-vs17",
+      "displayName": "windows-vs17",
+      "inherits": "windows-msvc",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64"
+    },
+    {
+      "name": "windows-vs16",
+      "displayName": "windows-vs16",
+      "inherits": "windows-msvc",
+      "generator": "Visual Studio 16 2019",
+      "architecture": "x64"
+    },
+    {
+      "name": "windows-vs15",
+      "displayName": "windows-vs15",
+      "inherits": "windows-msvc",
+      "generator": "Visual Studio 15 2017",
+      "architecture": "x64"
+    }
+  ]
+}

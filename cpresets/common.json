@@ -1,0 +1,49 @@
+{
+  "version":4,
+  "configurePresets": [
+    {
+      "name": "common",
+      "displayName": "common",
+      "cacheVariables":
+      {
+        "CMAKE_EXPORT_COMPILE_COMMANDS":"ON"
+      }
+    },
+    {
+      "name": "Debug",
+      "displayName": "Debug",
+      "inherits": "common",
+      "cacheVariables":
+      {
+        "CMAKE_BUILD_TYPE":"Debug"
+      }
+    },
+    {
+      "name": "Release",
+      "displayName": "Release",
+      "inherits": "common",
+      "cacheVariables":
+      {
+        "CMAKE_BUILD_TYPE":"Release"
+      }
+    },
+    {
+      "name": "bld",
+      "displayName": "bld",
+      "binaryDir": "${sourceDir}/../bld",
+      "installDir": "${sourceDir}/../install"
+    },
+    {
+      "name": "bld-worktree",
+      "displayName": "bld-worktree",
+      "binaryDir": "${sourceDir}/../bld-worktree",
+      "installDir": "${sourceDir}/../install-worktree"
+    },
+    {
+      "name": "Ninja",
+      "displayName": "Ninja",
+      "inherits": "common",
+      "generator": "Ninja"
+    }
+  ]
+}

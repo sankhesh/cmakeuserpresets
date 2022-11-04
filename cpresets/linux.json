@@ -1,0 +1,30 @@
+{
+  "version":4,
+  "configurePresets":
+  [
+    {
+      "name": "linux",
+      "displayName": "linux"
+    },
+    {
+      "name": "linux-gcc",
+      "displayName": "linux-gcc",
+      "inherits": "linux",
+      "cacheVariables":
+      {
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++"
+      }
+    },
+    {
+      "name": "linux-clang",
+      "displayName": "linux-clang",
+      "inherits": "linux",
+      "cacheVariables":
+      {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++"
+      }
+    }
+  ]
+}
