@@ -4,7 +4,6 @@
     {
       "name": "common",
       "displayName": "common",
-      "generator": "Ninja",
       "cacheVariables":
       {
         "CMAKE_EXPORT_COMPILE_COMMANDS":"ON"
@@ -39,6 +38,12 @@
       "displayName": "bld-worktree",
       "binaryDir": "${sourceDir}/../bld-worktree",
       "installDir": "${sourceDir}/../install-worktree"
+    },
+    {
+      "name": "Ninja",
+      "displayName": "Ninja",
+      "inherits": "common",
+      "generator": "Ninja"
     }
   ]
 }
