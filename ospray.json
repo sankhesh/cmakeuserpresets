@@ -1,0 +1,111 @@
+{
+  "version": 4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/linux.json",
+    "cpresets/windows.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "ospray-common",
+      "displayName": "ospray-common",
+      "inherits": "common",
+      "cacheVariables":
+      {
+        "BUILD_EMBREE_FROM_SOURCE": "OFF",
+        "BUILD_GLFW": "OFF",
+        "BUILD_JOBS:STRING": "12",
+        "BUILD_OSPRAY_APPS": "OFF",
+        "DOWNLOAD_ISPC": "ON",
+        "DOWNLOAD_TBB": "ON",
+        "INSTALL_IN_SEPARATE_DIRECTORIES": "OFF"
+      }
+    },
+    {
+      "name": "ospray-bld",
+      "displayName": "ospray-bld",
+      "binaryDir": "${sourceParentDir}/../../bld",
+      "installDir": "${sourceParentDir}/../../install",
+      "inherits":
+      [
+        "ospray-common"
+      ],
+      "cacheVariables":
+      {
+        "DEPENDENCIES_BUILD_TYPE": "RelWithDebInfo"
+      }
+    },
+    {
+      "name": "ospray-debug",
+      "displayName": "ospray-debug",
+      "inherits":
+      [
+        "Debug",
+        "ospray-common"
+      ],
+      "cacheVariables":
+      {
+        "DEPENDENCIES_BUILD_TYPE": "RelWithDebInfo"
+      }
+    },
+    {
+      "name": "ospray-release",
+      "displayName": "ospray-release",
+      "inherits":
+      [
+        "Release",
+        "ospray-common"
+      ],
+      "cacheVariables":
+      {
+        "DEPENDENCIES_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "ospray-debug-bld-linux",
+      "displayName": "ospray-debug-bld-linux",
+      "inherits":
+      [
+        "ospray-debug",
+        "ospray-bld",
+        "linux-gcc",
+        "Ninja"
+      ]
+    },
+    {
+      "name": "ospray-release-bld-linux",
+      "displayName": "ospray-release-bld-linux",
+      "inherits":
+      [
+        "ospray-release",
+        "ospray-bld",
+        "linux-gcc",
+        "Ninja"
+      ]
+    },
+    {
+      "name": "ospray-debug-bld-windows",
+      "displayName": "ospray-debug-bld-windows",
+      "inherits":
+      [
+        "ospray-debug",
+        "ospray-bld",
+        "windows-msvc",
+        "Ninja"
+      ]
+    },
+    {
+      "name": "ospray-release-bld-windows",
+      "displayName": "ospray-release-bld-windows",
+      "inherits":
+      [
+        "ospray-release",
+        "ospray-bld",
+        "windows-msvc",
+        "Ninja"
+      ]
+    }
+  ]
+}
