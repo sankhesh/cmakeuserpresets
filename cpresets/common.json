@@ -30,14 +30,14 @@
     {
       "name": "bld",
       "displayName": "bld",
-      "binaryDir": "${sourceDir}/../bld",
-      "installDir": "${sourceDir}/../install"
+      "binaryDir": "${sourceParentDir}/bld",
+      "installDir": "${sourceParentDir}/install"
     },
     {
       "name": "bld-worktree",
       "displayName": "bld-worktree",
-      "binaryDir": "${sourceDir}/../bld-worktree",
-      "installDir": "${sourceDir}/../install-worktree"
+      "binaryDir": "${sourceParentDir}/bld-worktree",
+      "installDir": "${sourceParentDir}/install-worktree"
     },
     {
       "name": "Ninja",
