@@ -39,7 +39,8 @@
         "vtk-common",
         "Debug",
         "bld",
-        "linux-gcc"
+        "linux-gcc",
+        "Ninja"
       ]
     },
     {
