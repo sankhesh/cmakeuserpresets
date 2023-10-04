@@ -26,7 +26,8 @@
         "cmake-common",
         "Debug",
         "bld",
-        "linux-gcc"
+        "linux-gcc",
+        "Ninja"
       ]
     },
     {
@@ -37,7 +38,8 @@
         "cmake-common",
         "Debug",
         "bld",
-        "windows-msvc"
+        "windows-msvc",
+        "Ninja"
       ]
     },
     {
@@ -48,7 +50,8 @@
         "cmake-common",
         "Release",
         "bld",
-        "windows-msvc"
+        "windows-msvc",
+        "Ninja"
       ]
     }
   ]
