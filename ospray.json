@@ -16,7 +16,7 @@
       {
         "BUILD_EMBREE_FROM_SOURCE": "OFF",
         "BUILD_GLFW": "OFF",
-        "BUILD_JOBS:STRING": "12",
+        "BUILD_JOBS": "12",
         "BUILD_OSPRAY_APPS": "OFF",
         "DOWNLOAD_ISPC": "ON",
         "DOWNLOAD_TBB": "ON",
