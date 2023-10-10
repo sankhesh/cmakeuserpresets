@@ -12,7 +12,6 @@
       "inherits": "windows",
       "cacheVariables":
       {
-        "CMAKE_AR": "lib.exe",
         "CMAKE_CXX_COMPILER": "cl.exe",
         "CMAKE_C_COMPILER": "cl.exe",
         "CMAKE_LINKER": "link.exe"
