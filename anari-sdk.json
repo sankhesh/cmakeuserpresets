@@ -1,0 +1,32 @@
+{
+  "version": 4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/linux.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "anari",
+      "displayName": "anari",
+      "inherits":
+      [
+        "common",
+        "Debug",
+        "bld",
+        "Ninja"
+      ],
+      "cacheVariables":
+      {
+        "BUILD_SHARED_LIBS": "ON",
+        "BUILD_TESTING": "OFF",
+        "BUILD_HELIDE_DEVICE": "ON",
+        "BUILD_EXAMPLES": "OFF",
+        "BUILD_VIEWER": "OFF",
+        "BUILD_CTS": "OFF"
+      }
+    }
+  ]
+}
+
