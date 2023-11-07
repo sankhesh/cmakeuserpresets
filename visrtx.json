@@ -21,10 +21,11 @@
       {
         "BUILD_SHARED_LIBS": "ON",
         "BUILD_TESTING": "OFF",
-        "anari_DIR": "/home/sankhesh/Projects/anari/anari-sdk/install/lib/cmake/anari-0.7.2",
+        "anari_DIR": "/home/sankhesh/Projects/anari/anari-sdk/install/lib/cmake/anari-0.8.0",
         "OptiX7_ROOT_DIR": "/home/sankhesh/Projects/anari/optix",
-        "CMAKE_C_COMPILER": "/usr/bin/gcc",
-        "CMAKE_CXX_COMPILER": "/usr/bin/g++"
+        "CMAKE_C_COMPILER": "/opt/cuda/bin/gcc",
+        "CMAKE_CXX_COMPILER": "/opt/cuda/bin/g++",
+        "CMAKE_CUDA_FLAGS": "-ccbin /opt/cuda/bin/g++"
       },
       "environment":
       {
