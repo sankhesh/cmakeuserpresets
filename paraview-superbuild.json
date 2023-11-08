@@ -1,0 +1,35 @@
+{
+  "version": 4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/linux.json",
+    "cpresets/windows.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "paraview-superbuild",
+      "displayName": "paraview-superbuild",
+      "binaryDir": "${sourceParentDir}/bld-superbuild",
+      "installDir": "${sourceParentDir}/install-superbuild",
+      "inherits":
+      [
+        "Debug",
+        "Ninja",
+        "linux-gcc"
+      ],
+      "cacheVariables":
+      {
+        "USE_SYSTEM_tbb": "OFF",
+        "BUILD_SHARED_LIBRARIES": "ON",
+        "BUILD_TESTING": "OFF",
+        "ENABLE_cxx11": "ON",
+        "ENABLE_nlohmannjson": "ON",
+        "ENABLE_ospray": "ON",
+        "ENABLE_paraview": "ON",
+        "ENABLE_qt5": "ON"
+      }
+    }
+  ]
+}
