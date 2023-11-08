@@ -11,11 +11,10 @@
     {
       "name": "paraview-superbuild",
       "displayName": "paraview-superbuild",
-      "binaryDir": "${sourceParentDir}/bld-superbuild",
-      "installDir": "${sourceParentDir}/install-superbuild",
       "inherits":
       [
-        "Debug",
+        "bld",
+        "Release",
         "Ninja",
         "linux-gcc"
       ],
@@ -28,7 +27,13 @@
         "ENABLE_nlohmannjson": "ON",
         "ENABLE_ospray": "ON",
         "ENABLE_paraview": "ON",
-        "ENABLE_qt5": "ON"
+        "paraview_SOURCE_SELECTION": "git",
+        "paraview_SOURCE_DIR": "/home/sankhesh/Projects/paraview/paraview-worktree",
+        "paraview_GIT_REPOSITORY": "https://gitlab.kitware.com/sankhesh/paraview.git",
+        "paraview_GIT_TAG": "origin/anari",
+        "ENABLE_qt5": "ON",
+        "USE_SYSTEM_qt5": "ON",
+        "ENABLE_anari": "ON"
       }
     }
   ]
