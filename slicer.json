@@ -1,0 +1,79 @@
+{
+  "version":4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/windows.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "x64-Debug",
+      "displayName": "x64-Debug",
+      "binaryDir": "D:/S4",
+      "installDir": "${sourceDir}/../install",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "cacheVariables":
+      {
+        "CMAKE_BUILD_TYPE":"Debug",
+        "CMAKE_CXX_COMPILER":"cl.exe",
+        "CMAKE_CXX_MP_FLAG":"ON",
+        "CMAKE_C_COMPILER":"cl.exe",
+        "CMAKE_EXPORT_COMPILE_COMMANDS":"ON",
+        "CMAKE_LINKER":"link.exe",
+        "CMAKE_PREFIX_PATH": "D:/Projects/Qt/install/lib/cmake",
+        "Patch_EXECUTABLE": "D:/Software/patch-2.5.9-7-bin/bin/patch.exe",
+        "Slicer_BUILD_WEBENGINE_SUPPORT":"OFF",
+        "Slicer_USE_PYTHONQT": "ON",
+        "Slicer_USE_PYTHONQT_WITH_OPENSSL": "ON",
+        "Slicer_USE_SimpleITK": "OFF",
+        "VTK_BUILD_TESTING":"ON",
+        "VTK_DEBUG_LEAKS":"ON",
+        "VTK_ENABLE_OSPRAY":"OFF",
+        "VTK_QT_VERSION":"5",
+        "VTK_SMP_IMPLEMENTATION_TYPE":"TBB",
+        "CMAKE_NINJA_FORCE_RESPONSE_FILE":"TRUE",
+        "CMAKE_C_USE_RESPONSE_FILE_FOR_OBJECTS":"TRUE",
+        "CMAKE_CXX_USE_RESPONSE_FILE_FOR_OBJECTS":"TRUE"
+      }
+    },
+    {
+      "name": "Slicer-common",
+      "displayName": "Slicer-common",
+      "inherits":
+      [
+        "Debug",
+        "windows-msvc"
+      ],
+      "cacheVariables":
+      {
+        "BUILD_TESTING":"OFF",
+        "CMAKE_PREFIX_PATH": "D:/Projects/Qt/install/lib/cmake",
+        "Patch_EXECUTABLE": "D:/Software/patch-2.5.9-7-bin/bin/patch.exe",
+        "Slicer_BUILD_CLI":"OFF",
+        "Slicer_BUILD_DOCUMENTATION":"OFF",
+        "Slicer_BUILD_QT_DESIGNER_PLUGINS":"OFF",
+        "Slicer_BUILD_WEBENGINE_SUPPORT":"OFF",
+        "Slicer_USE_PYTHONQT": "ON",
+        "Slicer_USE_PYTHONQT_WITH_OPENSSL": "ON",
+        "Slicer_USE_SimpleITK": "OFF",
+        "VTK_BUILD_TESTING":"OFF",
+        "VTK_DEBUG_LEAKS":"ON",
+        "VTK_ENABLE_OSPRAY":"OFF",
+        "VTK_QT_VERSION":"5"
+      }
+    },
+    {
+      "name": "slicer",
+      "displayName": "slicer",
+      "binaryDir": "D:/S/b",
+      "installDir": "D:/S/i",
+      "inherits":
+      [
+        "Slicer-common",
+        "windows-vs17"
+      ]
+    }
+  ]
+}
