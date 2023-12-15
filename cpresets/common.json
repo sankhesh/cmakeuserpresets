@@ -28,6 +28,15 @@
       }
     },
     {
+      "name": "RelWithDebInfo",
+      "displayName": "RelWithDebInfo",
+      "inherits": "common",
+      "cacheVariables":
+      {
+        "CMAKE_BUILD_TYPE":"RelWithDebInfo"
+      }
+    },
+    {
       "name": "bld",
       "displayName": "bld",
       "binaryDir": "${sourceParentDir}/bld",

@@ -4,7 +4,11 @@
   [
     {
       "name": "windows",
-      "displayName": "windows"
+      "displayName": "windows",
+      "cacheVariables":
+      {
+        "CMAKE_CXX_MP_FLAG": "ON"
+      }
     },
     {
       "name": "windows-msvc",
@@ -14,7 +18,10 @@
       {
         "CMAKE_CXX_COMPILER": "cl.exe",
         "CMAKE_C_COMPILER": "cl.exe",
-        "CMAKE_LINKER": "link.exe"
+        "CMAKE_LINKER": "link.exe",
+        "CMAKE_NINJA_FORCE_RESPONSE_FILE":"TRUE",
+        "CMAKE_C_USE_RESPONSE_FILE_FOR_OBJECTS":"TRUE",
+        "CMAKE_CXX_USE_RESPONSE_FILE_FOR_OBJECTS":"TRUE"
       }
     },
     {
