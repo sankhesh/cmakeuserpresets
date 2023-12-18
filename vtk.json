@@ -51,7 +51,8 @@
         "vtk-common",
         "Debug",
         "bld",
-        "windows-msvc"
+        "windows-msvc",
+        "Ninja"
       ]
     },
     {
@@ -65,7 +66,8 @@
       "cacheVariables":
       {
         "TBB_DIR":"D:/Projects/ospray/install/lib/cmake/tbb",
-        "ospray_DIR":"D:/Projects/ospray/install/lib/cmake/ospray-2.7.1"
+        "ospray_DIR":"D:/Projects/ospray/install/lib/cmake/ospray-2.7.1",
+        "Qt5_DIR":"D:/Projects/Qt/install/lib/cmake/Qt5"
       }
     }
   ]
