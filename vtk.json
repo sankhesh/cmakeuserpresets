@@ -18,17 +18,17 @@
         "VTK_DEBUG_LEAKS":"ON",
         "VTK_MODULE_ENABLE_VTK_GUISupportQt":"WANT",
         "VTK_QT_VERSION":"5",
-        "VTK_SMP_IMPLEMENTATION_TYPE":"TBB",
         "VTK_WRAP_PYTHON":"OFF"
       }
     },
     {
-      "name": "vtk-ospray",
-      "displayName": "vtk-ospray",
+      "name": "ospray",
+      "displayName": "ospray",
       "cacheVariables":
       {
         "VTK_ENABLE_OSPRAY":"ON",
-        "VTK_MODULE_ENABLE_VTK_RenderingRayTracing":"WANT"
+        "VTK_MODULE_ENABLE_VTK_RenderingRayTracing":"WANT",
+        "VTK_SMP_IMPLEMENTATION_TYPE":"TBB"
       }
     },
     {
@@ -53,7 +53,11 @@
         "bld",
         "windows-msvc",
         "Ninja"
-      ]
+      ],
+      "cacheVariables":
+      {
+        "Qt5_DIR":"D:/Projects/Qt/install/lib/cmake/Qt5"
+      }
     },
     {
       "name": "vtk-debug-bld-windows-ospray",
@@ -61,13 +65,23 @@
       "inherits":
       [
         "vtk-debug-bld-windows",
-        "vtk-ospray"
+        "ospray"
       ],
       "cacheVariables":
       {
         "TBB_DIR":"D:/Projects/ospray/install/lib/cmake/tbb",
-        "ospray_DIR":"D:/Projects/ospray/install/lib/cmake/ospray-2.7.1",
-        "Qt5_DIR":"D:/Projects/Qt/install/lib/cmake/Qt5"
+        "ospray_DIR":"D:/Projects/ospray/install/lib/cmake/ospray-2.7.1"
+      }
+    },
+    {
+      "name": "openvr",
+      "displayName": "openvr",
+      "cacheVariables":
+      {
+        "VTK_MODULE_ENABLE_VTK_RenderingOpenVR": "WANT",
+        "VTK_OPENVR_TESTING_ENABLE_INTERACTIVE_TESTS": "ON",
+        "VTK_OPENVR_TESTING_ENABLE_RUNTIME_TESTS": "ON",
+        "OpenVR_ROOT": "D:/Software/openvr"
       }
     }
   ]
