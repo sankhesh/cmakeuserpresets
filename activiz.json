@@ -1,0 +1,57 @@
+{
+  "version": 4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/windows.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "x64-Debug",
+      "displayName": "x64-Debug",
+      "generator": "Visual Studio 15 2017",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/../bld",
+      "installDir": "${sourceDir}/../install",
+      "cacheVariables":
+      {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS":"ON",
+        "CMAKE_C_COMPILER": "cl.exe",
+        "CMAKE_CXX_COMPILER": "cl.exe",
+        "CMAKE_LINKER": "link.exe",
+        "CMAKE_AR": "lib.exe",
+        "Mummy_DIR": "D:/Projects/mummy/bld/share/mummy-1.0.5",
+        "VTK_DIR": "D:/Projects/vtk/bld-activiz",
+        "AVDN_SNKEYFILE": "D:/Projects/Activiz/Activiz-Keys/Kitware.VTK.snk",
+        "castxml_EXECUTABLE": "D:/Software/castxml-windows/castxml/bin/castxml.exe",
+        "csc_EXECUTABLE": "C:/Windows/Microsoft.NET/Framework/v4.0.30319/csc.exe",
+        "dotnet_EXECUTABLE": "C:/Program Files/dotnet/dotnet.exe"
+      }
+    },
+    {
+      "name": "activiz-Release",
+      "displayName": "activiz-Release",
+      "inherits":
+      [
+        "windows-vs17",
+        "bld",
+        "common",
+        "Release"
+      ],
+      "cacheVariables":
+      {
+        "BUILD_TYPE": "Release",
+        "Mummy_DIR": "D:/Projects/mummy/bld/share/mummy-1.1.0",
+        "VTK_DIR": "D:/Projects/vtk/bld-activiz",
+        "AVDN_SNKEYFILE": "D:/Projects/Activiz/Activiz-Keys/Kitware.VTK.snk",
+        "castxml_EXECUTABLE": "D:/Software/castxml-windows/castxml/bin/castxml.exe",
+        "csc_EXECUTABLE": "C:/Windows/Microsoft.NET/Framework/v4.0.30319/csc.exe",
+        "dotnet_EXECUTABLE": "C:/Program Files/dotnet/dotnet.exe"
+      }
+    }
+  ]
+}
+
