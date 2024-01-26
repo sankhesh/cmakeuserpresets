@@ -12,6 +12,7 @@
       "name": "ospray-common",
       "displayName": "ospray-common",
       "inherits": "common",
+      "hidden": true,
       "cacheVariables":
       {
         "BUILD_EMBREE_FROM_SOURCE": "OFF",
@@ -28,10 +29,8 @@
       "displayName": "ospray-bld",
       "binaryDir": "${sourceParentDir}/../../bld",
       "installDir": "${sourceParentDir}/../../install",
-      "inherits":
-      [
-        "ospray-common"
-      ],
+      "inherits": "ospray-common",
+      "hidden": true,
       "cacheVariables":
       {
         "DEPENDENCIES_BUILD_TYPE": "RelWithDebInfo"
@@ -45,6 +44,7 @@
         "Debug",
         "ospray-common"
       ],
+      "hidden": true,
       "cacheVariables":
       {
         "DEPENDENCIES_BUILD_TYPE": "RelWithDebInfo"
@@ -58,6 +58,7 @@
         "Release",
         "ospray-common"
       ],
+      "hidden": true,
       "cacheVariables":
       {
         "DEPENDENCIES_BUILD_TYPE": "Release"

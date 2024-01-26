@@ -4,6 +4,7 @@
     {
       "name": "common",
       "displayName": "common",
+      "hidden": true,
       "cacheVariables":
       {
         "CMAKE_EXPORT_COMPILE_COMMANDS":"ON"
@@ -13,6 +14,7 @@
       "name": "Debug",
       "displayName": "Debug",
       "inherits": "common",
+      "hidden": true,
       "cacheVariables":
       {
         "CMAKE_BUILD_TYPE":"Debug"
@@ -22,6 +24,7 @@
       "name": "Release",
       "displayName": "Release",
       "inherits": "common",
+      "hidden": true,
       "cacheVariables":
       {
         "CMAKE_BUILD_TYPE":"Release"
@@ -31,6 +34,7 @@
       "name": "RelWithDebInfo",
       "displayName": "RelWithDebInfo",
       "inherits": "common",
+      "hidden": true,
       "cacheVariables":
       {
         "CMAKE_BUILD_TYPE":"RelWithDebInfo"
@@ -39,12 +43,14 @@
     {
       "name": "bld",
       "displayName": "bld",
+      "hidden": true,
       "binaryDir": "${sourceParentDir}/bld",
       "installDir": "${sourceParentDir}/install"
     },
     {
       "name": "bld-worktree",
       "displayName": "bld-worktree",
+      "hidden": true,
       "binaryDir": "${sourceParentDir}/bld-worktree",
       "installDir": "${sourceParentDir}/install-worktree"
     },
@@ -52,6 +58,7 @@
       "name": "Ninja",
       "displayName": "Ninja",
       "inherits": "common",
+      "hidden": true,
       "generator": "Ninja"
     }
   ]

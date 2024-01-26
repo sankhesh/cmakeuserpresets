@@ -12,6 +12,7 @@
       "name": "vtk-common",
       "displayName": "vtk-common",
       "inherits": "common",
+      "hidden": true,
       "cacheVariables":
       {
         "VTK_BUILD_TESTING":"ON",
@@ -24,6 +25,7 @@
     {
       "name": "ospray",
       "displayName": "ospray",
+      "hidden": true,
       "cacheVariables":
       {
         "VTK_ENABLE_OSPRAY":"ON",
@@ -76,6 +78,7 @@
     {
       "name": "openvr",
       "displayName": "openvr",
+      "hidden": true,
       "cacheVariables":
       {
         "VTK_MODULE_ENABLE_VTK_RenderingOpenVR": "WANT",

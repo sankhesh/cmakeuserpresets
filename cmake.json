@@ -12,6 +12,7 @@
       "name": "cmake-common",
       "displayName": "vtk-common",
       "inherits": "common",
+      "hidden": true,
       "cacheVariables":
       {
         "BUILD_TESTING":"OFF",

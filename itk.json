@@ -12,6 +12,7 @@
       "name": "itk-common",
       "displayName": "itk-common",
       "inherits": "common",
+      "hidden": true,
       "cacheVariables":
       {
         "BUILD_STATIC_LIBS":"ON",
