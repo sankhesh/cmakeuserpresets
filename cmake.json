@@ -10,7 +10,7 @@
   [
     {
       "name": "cmake-common",
-      "displayName": "vtk-common",
+      "displayName": "cmake-common",
       "inherits": "common",
       "hidden": true,
       "cacheVariables":
