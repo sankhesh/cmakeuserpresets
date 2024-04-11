@@ -98,6 +98,31 @@
         "OpenXR_DIR": "D:/Projects/openxr/install/cmake",
         "OpenXRRemoting_ROOT": "D:/Projects/HolographicRemoting-Samples/MixedReality-HolographicRemoting-Samples/player/sample/packages/Microsoft.Holographic.Remoting.OpenXr.2.9.0/build/native/"
       }
+    },
+    {
+      "name": "vtk-activiz",
+      "displayName": "vtk-activiz",
+      "binaryDir": "${sourceDir}/../bld-activiz",
+      "installDir": "${sourceDir}/../install-activiz",
+      "inherits":
+      [
+        "Release",
+        "Ninja",
+        "common",
+        "windows-msvc"
+      ],
+      "cacheVariables":
+      {
+        "VTK_BUILD_TESTING": "OFF",
+        "VTK_DEBUG_LEAKS": "OFF",
+        "VTK_LEGACY_SILENT": "ON",
+        "VTK_MODULE_ENABLE_VTK_RenderingContextOpenGL2": "YES",
+        "VTK_MODULE_ENABLE_VTK_RenderingExternal": "YES",
+        "VTK_MODULE_ENABLE_VTK_RenderingRayTracing": "DONT_WANT",
+        "VTK_MODULE_ENABLE_VTK_ViewsContext2D": "YES",
+        "VTK_WRAP_PYTHON": "OFF",
+        "VTK_ENABLE_WRAPPING": "OFF"
+      }
     }
   ]
 }
