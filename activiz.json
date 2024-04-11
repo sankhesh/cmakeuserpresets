@@ -49,7 +49,7 @@
         "VTK_DIR": "D:/Projects/vtk/bld-activiz",
         "BUILD_AVALONIA_CONTROLS": "OFF",
         "AVDN_SNKEYFILE": "D:/Projects/Activiz/Activiz-Keys/Kitware.VTK.snk",
-        "castxml_EXECUTABLE": "D:/Software/castxml-windows/castxml/bin/castxml.exe",
+        "castxml_EXECUTABLE": "D:/Software/castxml-windows-win11/castxml/bin/castxml.exe",
         "csc_EXECUTABLE": "C:/Windows/Microsoft.NET/Framework/v4.0.30319/csc.exe",
         "dotnet_EXECUTABLE": "C:/Program Files/dotnet/dotnet.exe"
       }
