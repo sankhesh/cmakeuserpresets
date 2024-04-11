@@ -44,8 +44,8 @@
         "Mummy_BINARY_DIR": "${sourceDir}/../bld",
         "Mummy_SNKEYFILE": "D:/Projects/Activiz/Activiz-Keys/Kitware.mummy.Runtime.snk",
         "csc_EXECUTABLE": "C:/Windows/Microsoft.NET/Framework/v4.0.30319/csc.exe",
-        "dotnet_EXECUTABLE": "C:/Program Files/dotnet/dotnet.exe"
-
+        "dotnet_EXECUTABLE": "C:/Program Files/dotnet/dotnet.exe",
+        "Mummy_DOTNET_TARGET_FRAMEWORK": "net8.0"
       }
     }
   ]
