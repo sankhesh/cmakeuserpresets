@@ -86,6 +86,18 @@
         "VTK_OPENVR_TESTING_ENABLE_RUNTIME_TESTS": "ON",
         "OpenVR_ROOT": "D:/Software/openvr"
       }
+    },
+    {
+      "name": "openxr",
+      "displayName": "openxr",
+      "cacheVariables":
+      {
+        "VTK_MODULE_ENABLE_VTK_RenderingOpenXRRemoting": "WANT",
+        "VTK_OPENXR_TESTING_ENABLE_INTERACTIVE_TESTS": "ON",
+        "VTK_OPENXR_TESTING_ENABLE_RUNTIME_TESTS": "ON",
+        "OpenXR_DIR": "D:/Projects/openxr/install/cmake",
+        "OpenXRRemoting_ROOT": "D:/Projects/HolographicRemoting-Samples/MixedReality-HolographicRemoting-Samples/player/sample/packages/Microsoft.Holographic.Remoting.OpenXr.2.9.0/build/native/"
+      }
     }
   ]
 }
