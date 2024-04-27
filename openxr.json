@@ -1,0 +1,29 @@
+{
+  "version":4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/windows.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "openxr-debug-bld-windows",
+      "displayName": "openxr-debug-bld-windows",
+      "inherits":
+      [
+        "Debug",
+        "Ninja",
+        "bld",
+        "windows-msvc"
+      ],
+      "cacheVariables":
+      {
+        "BUILD_LOADER": "ON",
+        "BUILD_TESTING": "OFF",
+        "DYNAMIC_LOADER": "ON"
+      }
+    }
+  ]
+}
+

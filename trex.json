@@ -1,0 +1,26 @@
+{
+  "version":4,
+  "include": [
+    "cpresets/common.json",
+    "cpresets/windows.json"
+  ],
+  "configurePresets": [
+    {
+      "name": "trex-local",
+      "displayName": "trex-local",
+      "inherits": [
+        "Ninja",
+        "windows-msvc",
+        "bld",
+        "Debug"
+      ],
+      "cacheVariables":
+      {
+        "VTK_DIR": "D:/Projects/vtk/bld",
+        "Qt5_DIR": "D:/Projects/Qt/install/lib/cmake/Qt5",
+        "OCTSEGMENTATION_ROOT": "D:/Projects/PhoenixResearch/oct-segmentation",
+        "OCTSEGMENTATION_VENV_DIR": "D:/Projects/PhoenixResearch/seg-env"
+      }
+    }
+  ]
+}
