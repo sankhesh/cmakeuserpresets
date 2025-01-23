@@ -21,7 +21,7 @@
       {
         "BUILD_SHARED_LIBS": "ON",
         "BUILD_TESTING": "OFF",
-        "anari_DIR": "/home/sankhesh/Projects/anari/anari-sdk/install/lib/cmake/anari-0.11.0",
+        "anari_DIR": "/home/sankhesh/Projects/anari/anari-sdk/install/lib/cmake/anari-0.12.1",
         "OptiX7_ROOT_DIR": "/home/sankhesh/Projects/anari/optix",
         "VISRTX_BUILD_EXAMPLES":"ON",
         "VISRTX_BUILD_INTERACTIVE_EXAMPLE": "ON"
