@@ -1,0 +1,33 @@
+{
+  "version":4,
+  "configurePresets":
+  [
+    {
+      "name": "macos",
+      "displayName": "macos",
+      "hidden": true
+    },
+    {
+      "name": "macos-gcc",
+      "displayName": "macos-gcc",
+      "inherits": "macos",
+      "hidden": true,
+      "cacheVariables":
+      {
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++"
+      }
+    },
+    {
+      "name": "macos-clang",
+      "displayName": "macos-clang",
+      "inherits": "macos",
+      "hidden": true,
+      "cacheVariables":
+      {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++"
+      }
+    }
+  ]
+}
