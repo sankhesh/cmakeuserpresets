@@ -1,39 +1,69 @@
 {
-  "version": 4,
+  "version": 10,
   "include":
   [
     "cpresets/common.json",
     "cpresets/linux.json",
-    "cpresets/windows.json"
+    "cpresets/windows.json",
+    "cpresets/macos.json"
   ],
   "configurePresets":
   [
     {
       "name": "paraview-superbuild",
       "displayName": "paraview-superbuild",
+      "hidden": true,
+      "binaryDir": "${sourceParentDir}/bld-superbuild",
+      "installDir": "${sourceParentDir}/install-superbuild",
       "inherits":
       [
-        "bld",
         "Release",
         "Ninja",
-        "linux-gcc"
+        "macos-clang"
       ],
       "cacheVariables":
       {
-        "USE_SYSTEM_tbb": "OFF",
         "BUILD_SHARED_LIBRARIES": "ON",
         "BUILD_TESTING": "OFF",
-        "ENABLE_cxx11": "ON",
+        "CMAKE_BUILD_TYPE_paraview": "Debug",
+        "ENABLE_anari": "ON",
+        "ENABLE_cxx17": "ON",
         "ENABLE_nlohmannjson": "ON",
-        "ENABLE_ospray": "ON",
+        "ENABLE_ospray": "OFF",
         "ENABLE_paraview": "ON",
-        "paraview_SOURCE_SELECTION": "git",
-        "paraview_SOURCE_DIR": "/home/sankhesh/Projects/paraview/paraview-worktree",
-        "paraview_GIT_REPOSITORY": "https://gitlab.kitware.com/sankhesh/paraview.git",
-        "paraview_GIT_TAG": "origin/anari",
-        "ENABLE_qt5": "ON",
-        "USE_SYSTEM_qt5": "ON",
-        "ENABLE_anari": "ON"
+        "ENABLE_qt6": "ON",
+        "ENABLE_visrtx": "ON",
+        "USE_NONFREE_COMPONENTS": "ON",
+        "USE_SYSTEM_qt6": "ON",
+        "USE_SYSTEM_tbb": "ON",
+        "paraview_GIT_TAG": "v6.1.0-RC1",
+        "paraview_SOURCE_SELECTION": "git"
+      }
+    },
+    {
+      "name": "paraview-superbuild-macos",
+      "displayName": "paraview-superbuild-macos",
+      "inherits": ["paraview-superbuild", "macos-clang"]
+    },
+    {
+      "name": "paraview-superbuild-linux",
+      "displayName": "paraview-superbuild-linux",
+      "inherits": ["paraview-superbuild", "linux-gcc"]
+    },
+    {
+      "name": "paraview-superbuild-windows",
+      "displayName": "paraview-superbuild-windows",
+      "inherits": ["paraview-superbuild", "windows-msvc"]
+    },
+    {
+      "name": "unused",
+      "displayName": "unused",
+      "hidden": true,
+      "cacheVariables":
+      {
+        "paraview_SOURCE_SELECTION": "source",
+        "paraview_SOURCE_DIR": "/home/sankhesh/Projects/paraview/paraview",
+        "paraview_GIT_REPOSITORY": "https://gitlab.kitware.com/sankhesh/paraview.git"
       }
     }
   ]
