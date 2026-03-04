@@ -18,8 +18,7 @@
       "inherits":
       [
         "Release",
-        "Ninja",
-        "macos-clang"
+        "Ninja"
       ],
       "cacheVariables":
       {
