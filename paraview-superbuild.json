@@ -24,7 +24,7 @@
       {
         "BUILD_SHARED_LIBRARIES": "ON",
         "BUILD_TESTING": "OFF",
-        "CMAKE_BUILD_TYPE_paraview": "Debug",
+        "CMAKE_BUILD_TYPE_paraview": "RelWithDebInfo",
         "ENABLE_anari": "ON",
         "ENABLE_cxx17": "ON",
         "ENABLE_nlohmannjson": "ON",
@@ -52,7 +52,12 @@
     {
       "name": "paraview-superbuild-windows",
       "displayName": "paraview-superbuild-windows",
-      "inherits": ["paraview-superbuild", "windows-msvc"]
+      "inherits": ["paraview-superbuild", "windows-msvc"],
+      "cacheVariables":
+      {
+        "Qt6_DIR": "D:/Projects/Qt/install-qt6/lib/cmake/Qt6",
+        "TBB_DIR": "D:/Software/Intel/oneAPI/tbb/latest/lib/cmake/tbb"
+      }
     },
     {
       "name": "unused",
