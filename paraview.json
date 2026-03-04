@@ -16,11 +16,9 @@
       "cacheVariables":
       {
         "PARAVIEW_BUILD_TESTING":"ON",
-        "PARAVIEW_USE_MPI":"ON",
         "PARAVIEW_USE_PYTHON":"ON",
         "PARAVIEW_USE_VTKM":"OFF",
-        "VTK_DEBUG_LEAKS":"ON",
-        "VTK_SMP_IMPLEMENTATION_TYPE":"TBB"
+        "VTK_DEBUG_LEAKS":"ON"
       }
     },
     {
@@ -42,7 +40,12 @@
         "Debug",
         "bld",
         "linux-gcc"
-      ]
+      ],
+      "cacheVariables":
+      {
+        "PARAVIEW_USE_MPI":"ON",
+        "VTK_SMP_IMPLEMENTATION_TYPE":"TBB"
+      }
     },
     {
       "name": "paraview-debug-bld-windows",
