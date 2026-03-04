@@ -27,10 +27,16 @@
       }
     },
     {
+      "name": "windows-vs18",
+      "displayName": "windows-vs18",
+      "inherits": "windows-msvc",
+      "generator": "Visual Studio 18 2026",
+      "architecture": "x64"
+    },
+    {
       "name": "windows-vs17",
       "displayName": "windows-vs17",
       "inherits": "windows-msvc",
-      "hidden": true,
       "generator": "Visual Studio 17 2022",
       "architecture": "x64"
     },
@@ -38,7 +44,6 @@
       "name": "windows-vs16",
       "displayName": "windows-vs16",
       "inherits": "windows-msvc",
-      "hidden": true,
       "generator": "Visual Studio 16 2019",
       "architecture": "x64"
     },
@@ -46,7 +51,6 @@
       "name": "windows-vs15",
       "displayName": "windows-vs15",
       "inherits": "windows-msvc",
-      "hidden": true,
       "generator": "Visual Studio 15 2017",
       "architecture": "x64"
     }
