@@ -1,9 +1,10 @@
 {
-  "version": 4,
+  "version": 10,
   "include":
   [
     "cpresets/common.json",
-    "cpresets/linux.json"
+    "cpresets/linux.json",
+    "cpresets/macos.json"
   ],
   "configurePresets":
   [
