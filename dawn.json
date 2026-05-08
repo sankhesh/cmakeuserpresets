@@ -1,0 +1,33 @@
+{
+  "version":4,
+  "include":
+  [
+    "cpresets/common.json",
+    "cpresets/macos.json"
+  ],
+  "configurePresets":
+  [
+    {
+      "name": "dawn",
+      "displayName": "dawn",
+      "inherits":
+      [
+        "Debug",
+        "Ninja",
+        "bld",
+        "macos-clang"
+      ],
+      "cacheVariables":
+      {
+        "DAWN_BUILD_MONOLITHIC_LIBRARY":"SHARED",
+        "DAWN_BUILD_SAMPLES":"OFF",
+        "DAWN_ENABLE_DESKTOP_GL":"OFF",
+        "DAWN_ENABLE_INSTALL":"ON",
+        "DAWN_ENABLE_OPENGLES":"OFF",
+        "DAWN_FETCH_DEPENDENCIES":"ON",
+        "DAWN_FORCE_SYSTEM_COMPONENT_LOAD":"ON",
+        "DAWN_USE_GLFW":"OFF"
+      }
+    }
+  ]
+}
