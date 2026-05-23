@@ -73,7 +73,11 @@
         "ospray-bld",
         "linux-gcc",
         "Ninja"
-      ]
+      ],
+      "cacheVariables":
+      {
+        "CMAKE_POLICY_VERSION_MINIMUM": "3.5"
+      }
     },
     {
       "name": "ospray-release-bld-linux",
