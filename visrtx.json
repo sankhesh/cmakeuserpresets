@@ -1,37 +1,22 @@
 {
   "version": 4,
-  "include":
-  [
-    "cpresets/common.json",
-    "cpresets/linux.json"
-  ],
-  "configurePresets":
-  [
+  "include": ["cpresets/common.json", "cpresets/linux.json"],
+  "configurePresets": [
     {
       "name": "visrtx",
       "displayName": "visrtx",
-      "inherits":
-      [
-        "common",
-        "Debug",
-        "bld",
-        "Ninja"
-      ],
-      "cacheVariables":
-      {
+      "inherits": ["common", "Debug", "bld", "Ninja"],
+      "cacheVariables": {
         "BUILD_SHARED_LIBS": "ON",
         "BUILD_TESTING": "OFF",
-        "anari_DIR": "/home/sankhesh/Projects/anari/anari-sdk/install/lib/cmake/anari-0.12.1",
-        "OptiX7_ROOT_DIR": "/home/sankhesh/Projects/anari/optix",
-        "VISRTX_BUILD_EXAMPLES":"ON",
+        "anari_DIR": "/home/sankhesh/Projects/anari/anari-sdk/install/lib/cmake/anari-0.16.0",
+        "VISRTX_BUILD_EXAMPLES": "ON",
         "VISRTX_BUILD_INTERACTIVE_EXAMPLE": "ON"
       },
-      "environment":
-      {
+      "environment": {
         "PATH": "/opt/cuda/bin:$penv{PATH}",
         "LD_LIBRARY_PATH": "/opt/cuda/lib64:$penv{LD_LIBRARY_PATH}"
       }
     }
   ]
 }
-
